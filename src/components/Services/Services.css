@@ -1,0 +1,39 @@
+.services{
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.service{
+    flex-basis: 19%;
+    position: relative;
+}
+
+.caption{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #D9D5D2;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.caption:hover {
+    background: rgba(0, 15, 152, 0.8);
+}
