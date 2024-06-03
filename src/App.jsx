@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Hero />
       <div className="container">
-        <Title title="What We Offer" subtitle="Our Services" />
+        <Title id="services" title="What We Offer" subtitle="Our Services" />
         <Services />
         <About />
         <Title title="Articles" />
