@@ -27,3 +27,8 @@ nav ul li{
     background-color: #313359;
     transition: 0.5s;
 }
+
+.scrolled {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }

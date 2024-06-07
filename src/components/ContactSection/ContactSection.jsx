@@ -8,7 +8,7 @@ import dark_arrow from "../../assets/dark-arrow.png";
 
 function ContactSection() {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="contact-col">
         <h3>
           Send Us A Message
