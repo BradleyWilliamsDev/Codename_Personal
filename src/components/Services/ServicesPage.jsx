@@ -2,11 +2,13 @@ import React from "react";
 import NavBarSolid from '../Navbar/NavBarSolid' ;
 import './Services.css';
 import Footer from "../ContactSection/Footer";
+import ScrollToTop from "../util/ScrollToTop";
 
 function ServicesPage() {
   return (
     <div>
       <NavBarSolid />
+      <ScrollToTop />
       <div class="container content">
         <h1 class="center">Our Services</h1>
 

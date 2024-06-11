@@ -3,11 +3,13 @@ import aboutimg from "../../assets/about.png";
 import NavBarSolid from "../Navbar/NavBarSolid";
 import "./About.css";
 import Footer from "../ContactSection/Footer";
+import ScrollToTop from "../util/ScrollToTop";
 
 function AboutPage() {
   return (
     <div>
       <NavBarSolid />
+      <ScrollToTop />
       <section className="about-page">
         <div className="main">
           <img src={aboutimg} alt="the ceo of the company" />

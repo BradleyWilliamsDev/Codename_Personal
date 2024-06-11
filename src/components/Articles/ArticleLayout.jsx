@@ -6,7 +6,7 @@ import "./ArticleLayout.css";
 function ArticleLayout() {
   return (
     <div className="article-container">
-      {articleContent.map((articleBeingChecked) => {
+      {articleContent.slice(0,4).map((articleBeingChecked) => {
         return (
           <Articles
             src={articleBeingChecked.src}

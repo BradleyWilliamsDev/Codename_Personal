@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/ON TARGET LOGO 2024 (1).png";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavBarSolid() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,10 +42,10 @@ function NavBarSolid() {
           <Link to={"/articles"}>Articles</Link>
         </li>
         <li>
-          <Link to={"/#testimonials"}>Testimonials</Link>
+          <Link to={{pathname:"/", hash:"#testimonials"}}>Testimonials</Link>
         </li>
         <li>
-          <Link to={"/#contact"}>
+          <Link to={{pathname:"/", hash:"#contact"}}>
             <button className="btn">Contact us</button>
           </Link>
         </li>
