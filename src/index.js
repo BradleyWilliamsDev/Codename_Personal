@@ -2,11 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import About from "./components/About/About";
+import AboutPage from "./components/About/AboutPage";
 import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
+import ServicesPage from "./components/Services/ServicesPage";
+import ArticlesPage from "./components/Articles/ArticlesPage";
+import SingleArticlePage from "./components/Articles/SingleArticlePage";
 
 const router = createBrowserRouter([
     {
@@ -15,7 +18,19 @@ const router = createBrowserRouter([
     },
     {
         path:"/about",
-        element:<About />
+        element:<AboutPage />
+    },
+    {
+        path:"/services",
+        element: <ServicesPage />
+    },
+    {
+        path:"/articles",
+        element: <ArticlesPage />
+    },
+    {
+        path:"/articles/:itemId",
+        element: <SingleArticlePage />
     }
 ])
 

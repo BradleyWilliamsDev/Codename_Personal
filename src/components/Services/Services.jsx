@@ -1,40 +1,40 @@
 import React from 'react'
 import './Services.css'
-import programImg1 from '../../assets/program-1.png';
-import programImg2 from '../../assets/program-2.png';
-import programImg3 from '../../assets/program-3.png';
-import programImg4 from '../../assets/program-2.png';
-import programImg5 from '../../assets/program-1.png';
+import OutsourcingIMG from '../../assets/OUTSOURCING.jpg';
+import RecruitmentIMG from '../../assets/SALES RECRUITMENT.jpg';
+import StrengthTrainingIMG from '../../assets/STRENGTH BASED TRAINING.jpg';
+import ValueAddedSalesTrainingIMG from '../../assets/VALUE ADDED SALES TRAINING.jpg';
+import OneOnOneTraining from '../../assets/ONE_ON_ONE_COACHING.jpg';
 
 function Services() {
   return (
     <div className='services'>
         <div className="service">
-            <img src={programImg1} alt="" />
+            <img src={StrengthTrainingIMG} alt="" />
             <div className="caption">
                 <p>Sales Training</p>
             </div>
         </div>
         <div className="service">
-            <img src={programImg2} alt="" />
+            <img src={RecruitmentIMG} alt="" />
             <div className="caption">
                 <p>Sales Recruitment</p>
             </div>
         </div>
         <div className="service">
-            <img src={programImg3} alt="" />
+            <img src={ValueAddedSalesTrainingIMG} alt="" />
             <div className="caption">
                 <p>Sales Synergy</p>
             </div>
         </div>
         <div className="service">
-            <img src={programImg4} alt="" />
+            <img src={OutsourcingIMG} alt="" />
             <div className="caption">
                 <p>Outsourced Sales Management</p>
             </div>
         </div>
         <div className="service">
-            <img src={programImg5} alt="" />
+            <img src={OneOnOneTraining} alt="" />
             <div className="caption">
                 <p>Sales Coaching</p>
             </div>

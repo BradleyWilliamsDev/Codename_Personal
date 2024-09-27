@@ -19,7 +19,7 @@ function App() {
         <About />
         <Title title="Articles" />
         <ArticleLayout />
-        <Title title="Testimonials" subtitle="Hear What Others Have To Say" />
+        <Title id="testimonials" title="Testimonials" subtitle="Hear What Others Have To Say" />
         <Testimonials />
         <Title title="Get In Touch" subtitle="Contact Us" />
         <ContactSection />

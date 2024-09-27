@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import logo from "../../assets/ON TARGET LOGO 2024 (1).png";
-import { Link } from "react-router-dom";
+import logo from "../../assets/ON TARGET LOGO 2024 COLOUR.png";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [sticky, setSticky] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -12,12 +15,53 @@ function Navbar() {
     });
   }, []);
 
+  useEffect(() => {
+    if (location.hash === "#testimonials") {
+      const testimonialsElement = document.getElementById("testimonials");
+      if (testimonialsElement) {
+        testimonialsElement.scrollIntoView({ behavior: "smooth" });
+        navigate("/");
+      }
+    } else if (location.hash === "#contact") {
+      const contactElement = document.getElementById("contact");
+      if (contactElement) {
+        contactElement.scrollIntoView({ behavior: "smooth" });
+        navigate("/");
+      }
+    }
+  }, [location, navigate]);
+
+  const handleClickHome = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleClickMovement = (section) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      navigate("/");
+    }
+  };
+
+  const handleBurgerMenuClick = () => {
+    setMenuActive(!menuActive);
+  };
+
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-      <img src={logo} alt="Company Logo" className="logo" />
-      <ul>
+      <Link to={"/"}>
+        <img src={logo} alt="Company Logo" className="logo" />
+      </Link>
+      <div className="burger-menu" onClick={handleBurgerMenuClick}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul className={menuActive ? "active" : "inactive"}>
         <li>
-          <Link to={"/"}>Home</Link>
+          <Link to={"/"} onClick={handleClickHome}>
+            Home
+          </Link>
         </li>
         <li>
           <Link to={"/about"}>About us</Link>
@@ -29,10 +73,25 @@ function Navbar() {
           <Link to={"/articles"}>Articles</Link>
         </li>
         <li>
-          <Link to={"/testimonials"}>Testimonials</Link>
+          <Link
+            to={{ pathname: "/", hash: "#testimonials" }}
+            onClick={() => handleClickMovement("testimonials")}
+          >
+            Testimonials
+          </Link>
         </li>
         <li>
-          <button className="btn">Contact us</button>
+          <Link
+            to={{ pathname: "/", hash: "#contact" }}
+            onClick={() => handleClickMovement("contact")}
+          >
+            <button
+              className="btn"
+              onClick={() => handleClickMovement("contact")}
+            >
+              Contact us
+            </button>
+          </Link>
         </li>
       </ul>
     </nav>
