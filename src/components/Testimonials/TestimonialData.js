@@ -26,6 +26,13 @@ const testimonialData = [
     position: "MD",
     content:
       "Master Movers had a terrific training experience with Carolyn. She was attentive and intuitive and provided frank feedback. She was a delight and we truly as a company enjoyed the overall experience and learnt alot. We aligned our branches countrywide and are applying the needs with customers and each other within the office. I would not hesitate to refer and or make use of Carolyn from On Target for any of our training requirements in the future.",
+  },
+  {
+    id: 5,
+    name: "Ben Moolman",
+    position: "National Sales Manager, Boltfast",
+    content:
+      "We have been working with On Target for the past year. Carolyn and her team have made the complicated recruiting process much more pleasant. The trademarks of the experience are around-the-clock availability, the ability to go above and beyond throughout the recruiting process, and always finding great candidates. With recruiting not being a straightforward process, they have made the experience easier to undertake and have become our go-to agency for finding suitable candidates across the country. We found them via a referral, and it is my pleasure to refer them to you as well.",
   }
 ];
 

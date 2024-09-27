@@ -10,7 +10,7 @@ function ArticlePageItem(props) {
         </div>
         <article>
           <h1>{props.title}</h1>
-          {props.content ? <p>{props.content}</p> : null}
+          {props.content ? <p>{props.content.substring(0,150) + "..."}</p> : null}
           <span>{props.author}</span>
         </article>
       </Link>

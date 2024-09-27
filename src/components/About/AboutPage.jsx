@@ -1,5 +1,5 @@
 import React from "react";
-import aboutimg from "../../assets/about.png";
+import about_image from '../../assets/ASH_8560.jpg';
 import NavBarSolid from "../Navbar/NavBarSolid";
 import "./About.css";
 import Footer from "../ContactSection/Footer";
@@ -12,7 +12,7 @@ function AboutPage() {
       <ScrollToTop />
       <section className="about-page">
         <div className="main">
-          <img src={aboutimg} alt="the ceo of the company" />
+          <img src={about_image} alt="the ceo of the company" />
           <div className="about-txt">
             <h1>About Us</h1>
             <h5>Sales Trainer</h5>

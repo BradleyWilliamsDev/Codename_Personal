@@ -1,6 +1,14 @@
-.article-container{
+.article-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 1050px) {
+  .article-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

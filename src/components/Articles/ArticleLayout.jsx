@@ -9,11 +9,11 @@ function ArticleLayout() {
       {articleContent.slice(0,4).map((articleBeingChecked) => {
         return (
           <Articles
+            id={articleBeingChecked.id}
             src={articleBeingChecked.src}
             alt={articleBeingChecked.alt}
             title={articleBeingChecked.title}
             content={articleBeingChecked.content}
-            link={articleBeingChecked.link}
           />
         );
       })}

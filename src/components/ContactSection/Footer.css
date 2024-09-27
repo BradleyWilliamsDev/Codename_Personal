@@ -1,3 +1,7 @@
+div{
+    position: relative;
+}
+
 footer * {
     box-sizing: border-box;
     padding: 0;
@@ -34,7 +38,7 @@ footer h4{
     max-width: 1200px;
     margin: 0 auto;
     padding: 2em;
-    position: relative;
+    z-index: 10000;
 }
 
 .footer .footer-container{

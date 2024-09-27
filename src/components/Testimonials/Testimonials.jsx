@@ -8,18 +8,20 @@ import Testimonial from "./Testimonial";
 function Testimonials() {
   const slider = useRef();
   let tX = 0;
+  const testimonialWidth = 790;
 
   function slideForward() {
-    if (tX > -50) {
-      tX -= 25;
+    if (tX > -(testimonialData.length - 1) * testimonialWidth) {
+      tX -= testimonialWidth;
+      slider.current.style.transform = `translateX(${tX}px)`;
     }
-    slider.current.style.transform = `translateX(${tX}%)`;
   }
+
   function slideBackward() {
     if (tX < 0) {
-      tX += 25;
+      tX += testimonialWidth;
+      slider.current.style.transform = `translateX(${tX}px)`;
     }
-    slider.current.style.transform = `translateX(${tX}%)`;
   }
 
   return (
@@ -32,16 +34,16 @@ function Testimonials() {
         onClick={slideBackward}
       />
       <div className="slider">
-        <ul ref={slider}>
+        <ul ref={slider} style={{ width: `${testimonialData.length * 100}%` }}>
           {testimonialData.map((dataBeingChecked) => {
-        return (
-          <Testimonial 
-            name = {dataBeingChecked.name}
-            position = {dataBeingChecked.position}
-            content = {dataBeingChecked.content}
-          />
-        );
-      })}
+            return (
+              <Testimonial
+                name={dataBeingChecked.name}
+                position={dataBeingChecked.position}
+                content={dataBeingChecked.content}
+              />
+            );
+          })}
         </ul>
       </div>
     </div>
